@@ -1,221 +1,34 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرزمانة الذهبية | الاسترلاب الرقمي للزمن</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="orb"></div>
+    <header>
+        <div class="logo">✦ الرزمانة الذهبية</div>
+        <div class="subtitle">الاسترلاب الرقمي لدقة الزمن</div>
+    </header>
+    <section class="hero">
+        <h1>الرزمانة الذهبية</h1>
+        <h2>مشروع حسابي وفلكي مستوحى من الإرث العلمي للاسترلاب، يهدف إلى تحقيق التزامن الرياضي بين الزمن الشمسي والزمن القمري.</h2>
+        <button onclick="goProject()">استكشف المشروع</button>
+    </section>
+    <section class="stats">
+        <div class="card"><div class="num">50,000</div><div class="txt">سنة محسوبة</div></div>
+        <div class="card main"><div id="counter">0</div><div class="txt">يوم تمت معالجته</div></div>
+        <div class="card"><div class="num">2</div><div class="txt">أنظمة زمنية متزامنة</div></div>
+    </section>
+    <section id="project" class="about">
+        <h2>حول المشروع</h2>
+        <p>الرزمانة الذهبية هي مشروع بحثي وحسابي يهدف إلى دراسة العلاقة الرياضية والفلكية بين التقويم الشمسي والتقويم القمري باستخدام خوارزمية هندسية متقدمة.</p>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
 
-body{
-    background:#030712;
-    color:#fff;
-    font-family:'Cairo',sans-serif;
-    overflow-x:hidden;
-}
-
-.stars{
-    position:fixed;
-    width:100%;
-    height:100%;
-    background-image:
-    radial-gradient(#fff 1px,transparent 1px);
-    background-size:50px 50px;
-    opacity:.12;
-    animation:stars 120s linear infinite;
-    z-index:-2;
-}
-
-.orb{
-    position:fixed;
-    width:500px;
-    height:500px;
-    border:2px solid rgba(255,215,0,.15);
-    border-radius:50%;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    animation:rotate 60s linear infinite;
-    z-index:-1;
-}
-
-@keyframes rotate{
-    from{
-        transform:translate(-50%,-50%) rotate(0deg);
-    }
-    to{
-        transform:translate(-50%,-50%) rotate(360deg);
-    }
-}
-
-@keyframes stars{
-    from{
-        transform:translateY(0);
-    }
-    to{
-        transform:translateY(-500px);
-    }
-}
-
-header{
-    padding:30px;
-    text-align:center;
-}
-
-.logo{
-    font-size:42px;
-    font-weight:900;
-    color:#FFD700;
-    text-shadow:0 0 20px #FFD700;
-}
-
-.subtitle{
-    margin-top:10px;
-    color:#bbb;
-}
-
-.hero{
-    min-height:60vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-}
-
-.hero h1{
-    font-size:72px;
-    color:#FFD700;
-}
-
-.hero h2{
-    max-width:900px;
-    margin-top:30px;
-    line-height:2;
-    font-weight:300;
-}
-
-button{
-    margin-top:40px;
-    padding:16px 40px;
-    border:none;
-    border-radius:40px;
-    background:#FFD700;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.3s;
-    box-shadow:0 0 20px rgba(255,215,0,.4);
-}
-
-button:hover{
-    transform:translateY(-5px) scale(1.05);
-    box-shadow:0 0 35px rgba(255,215,0,.7);
-}
-
-.stats{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:30px;
-    padding:60px 20px;
-}
-
-.card{
-    width:280px;
-    padding:35px;
-    background:#111827;
-    border-radius:20px;
-    text-align:center;
-    transition:.3s;
-    box-shadow:0 0 25px rgba(255,215,0,.08);
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 30px rgba(255,215,0,.2);
-}
-
-.main{
-    border:1px solid rgba(255,215,0,.3);
-}
-
-.num,
-#counter{
-    font-size:48px;
-    color:#FFD700;
-    font-weight:900;
-}
-
-.txt{
-    margin-top:10px;
-    color:#bbb;
-}
-
-.progress{
-    margin-top:20px;
-    width:100%;
-    height:8px;
-    background:#222;
-    border-radius:20px;
-    overflow:hidden;
-}
-
-#progressBar{
-    width:0%;
-    height:100%;
-    background:#FFD700;
-}
-
-.about{
-    max-width:1100px;
-    margin:auto;
-    padding:80px 20px;
-    text-align:center;
-}
-
-.about h2{
-    color:#FFD700;
-    margin-bottom:40px;
-}
-
-.about p{
-    line-height:2.2;
-    margin:25px 0;
-    color:#ddd;
-}
-
-.features{
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-    padding:50px;
-}
-
-.feature{
-    background:#111827;
-    padding:30px;
-    border-radius:20px;
-    transition:.3s;
-}
-
-.feature:hover{
-    transform:translateY(-8px);
-}
-
-.feature h3{
-    color:#FFD700;
-    margin-bottom:15px;
-}
-
-footer{
-    padding:50px;
-    text-align:center;
-    color:#888;
-}
-
-.dev{
-    margin-top:15px;
-    color:#FFD700;
-    font-weight:bold;
-    letter-spacing:2px;
-}

@@ -1,63 +1,17 @@
-const TARGET = 18250000;
-
-const counter =
-    document.getElementById("counter");
-
-const progress =
-    document.getElementById("progressBar");
-
-let started = false;
-
-function animateCounter() {
-
-    if(started) return;
-
-    started = true;
-
-    let current = 0;
-
-    const duration = 2500; // 2.5 ثانية
-
-    const fps = 60;
-
-    const steps =
-        duration / (1000 / fps);
-
-    const increment =
-        TARGET / steps;
-
-    const animation =
-        setInterval(() => {
-
-            current += increment;
-
-            if(current >= TARGET){
-
-                current = TARGET;
-
-                clearInterval(
-                    animation
-                );
-            }
-
-            counter.innerHTML =
-                Math.floor(current)
-                .toLocaleString('en-US');
-
-            progress.style.width =
-                (current / TARGET) *
-                100 + "%";
-
-        }, 1000 / fps);
-}
+const target = 18250000;
+const counter = document.getElementById("counter");
+let current = 0;
+const increment = Math.ceil(target / 450);
+const animation = setInterval(() => {
+    current += increment;
+    if(current >= target){
+        current = target;
+        clearInterval(animation);
+    }
+    counter.innerHTML = current.toLocaleString('en-US');
+}, 5);
 
 function goProject(){
-
-    animateCounter();
-
-    document
-        .getElementById("project")
-        .scrollIntoView({
-            behavior:"smooth"
-        });
+    document.getElementById("project").scrollIntoView({ behavior:"smooth" });
 }
+
