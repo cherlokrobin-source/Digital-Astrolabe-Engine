@@ -1,5 +1,6 @@
-import MasterEngine from "./src/engines/MasterEngine.js";
-import ArchiveEnginePRO from "./src/archive/ArchiveEnginePRO.js";
+// المسارات المصححة بناءً على هيكلية مشروعك
+import MasterEngine from "./engines/master/MasterEngine.js"; 
+import ArchiveEnginePRO from "./archive/ArchiveEnginePRO.js";
 
 const engine = new MasterEngine();
 const archive = new ArchiveEnginePRO(engine);
@@ -9,3 +10,4 @@ archive.generateAll(10);
 
 // اختبار قراءة يوم
 console.log(archive.getDay(100));
+
