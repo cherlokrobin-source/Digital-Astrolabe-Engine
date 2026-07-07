@@ -1,34 +1,95 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الرزمانة الذهبية | الاسترلاب الرقمي للزمن</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الرزمانة الذهبية - Golden Calendar</title>
+    <meta name="description" content="مشروع رقمي لمزامنة التقويمين الشمسي والقمري عبر 50,000 سنة" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="stars"></div>
-    <div class="orb"></div>
-    <header>
-        <div class="logo">✦ الرزمانة الذهبية</div>
-        <div class="subtitle">الاسترلاب الرقمي لدقة الزمن</div>
-    </header>
-    <section class="hero">
-        <h1>الرزمانة الذهبية</h1>
-        <h2>مشروع حسابي وفلكي مستوحى من الإرث العلمي للاسترلاب، يهدف إلى تحقيق التزامن الرياضي بين الزمن الشمسي والزمن القمري.</h2>
-        <button onclick="goProject()">استكشف المشروع</button>
+
+    <!-- Statistics -->
+    <section id="stats" class="stats">
+        <div class="card">
+            <div class="num" aria-label="50,000 سنة شمسية">50,000</div>
+            <div class="txt">سنة شمسية محسوبة</div>
+        </div>
+        <div class="card main">
+            <div id="counter" role="status" aria-live="polite">0</div>
+            <div class="txt">يوم تمت معالجته</div>
+        </div>
+        <div class="card">
+            <div class="num" aria-label="نظامان زمنيان">2</div>
+            <div class="txt">أنظمة زمنية متزامنة</div>
+        </div>
     </section>
-    <section class="stats">
-        <div class="card"><div class="num">50,000</div><div class="txt">سنة محسوبة</div></div>
-        <div class="card main"><div id="counter">0</div><div class="txt">يوم تمت معالجته</div></div>
-        <div class="card"><div class="num">2</div><div class="txt">أنظمة زمنية متزامنة</div></div>
-    </section>
+
+    <!-- About -->
     <section id="project" class="about">
         <h2>حول المشروع</h2>
-        <p>الرزمانة الذهبية هي مشروع بحثي وحسابي يهدف إلى دراسة العلاقة الرياضية والفلكية بين التقويم الشمسي والتقويم القمري باستخدام خوارزمية هندسية متقدمة.</p>
+        <p>
+            <strong>الرزمانة الذهبية</strong> هي مشروع بحثي وتقني يهدف إلى بناء
+            نظام زمني رقمي يحافظ على التزامن الرياضي بين
+            التقويم الشمسي والتقويم القمري ضمن نطاق يمتد إلى
+            50,000 سنة.
+        </p>
+        <p>
+            يعالج المشروع أكثر من
+            <strong>18,250,000</strong>
+            يوم متزامن بين النظامين، مع إمكانية البحث في أي
+            تاريخ وإظهار المقابل الشمسي والقمري بدقة عالية.
+        </p>
+        <p>
+            استُلهمت فكرة المشروع من <strong>الأسطرلاب</strong>،
+            ذلك الابتكار العلمي الإسلامي الذي جمع بين
+            الفلك والرياضيات والهندسة،
+            ليصبح اليوم نموذجًا رقميًا حديثًا
+            يخدم الدراسات الزمنية والحوسبة.
+        </p>
     </section>
-    <script src="script.js"></script>
+
+    <!-- Features -->
+    <section id="features" class="features">
+        <div class="feature">
+            <h3>☀️ التقويم الشمسي</h3>
+            <p>محاكاة دقيقة لجميع السنوات الشمسية ضمن النطاق الزمني الكامل.</p>
+        </div>
+        <div class="feature">
+            <h3>🌙 التقويم القمري</h3>
+            <p>حساب كامل للدورات القمرية والتقويم الهجري طويل المدى.</p>
+        </div>
+        <div class="feature">
+            <h3>⚙️ الخوارزمية الهندسية</h3>
+            <p>محرك رياضي متقدم لمعالجة ملايين العمليات الزمنية بسرعة ودقة.</p>
+        </div>
+        <div class="feature">
+            <h3>🛰️ الأسطرلاب الرقمي</h3>
+            <p>دمج التراث العلمي الإسلامي مع تقنيات الحوسبة الحديثة.</p>
+        </div>
+        <div class="feature">
+            <h3>🔍 البحث الزمني</h3>
+            <p>الوصول إلى أي تاريخ داخل نطاق خمسين ألف سنة.</p>
+        </div>
+        <div class="feature">
+            <h3>📊 التحليل الزمني</h3>
+            <p>تحليل العلاقات الرياضية بين النظامين الشمسي والقمري.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <h3>الرزمانة الذهبية</h3>
+        <p>الأسطرلاب الرقمي لدقة الزمن</p>
+        <div class="footer-stats">
+            <span>50,000 سنة</span>
+            <span>18,250,000 يوم</span>
+            <span>تقويمان متزامنان</span>
+        </div>
+        <div class="copyright">© 2026 Golden Calendar Project</div>
+        <div class="dev">Developed by <strong>Nemimeche Benaissa</strong></div>
+    </footer>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
-
