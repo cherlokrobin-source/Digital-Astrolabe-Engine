@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-// المسارات المصححة بناءً على هيكلية مشروعك
-import MasterEngine from "./engines/master/MasterEngine.js"; 
-import ArchiveEnginePRO from "./archive/ArchiveEnginePRO.js";
-
-const engine = new MasterEngine();
-const archive = new ArchiveEnginePRO(engine);
-
-// توليد تدريجي (ابدأ صغير)
-archive.generateAll(10);
-
-// اختبار قراءة يوم
-console.log(archive.getDay(100));
-=======
 import fs from 'fs';
 import { MasterEngine } from "./src/engines/master/MasterEngine.js";
 import { WeekEngine } from "./src/engines/week/WeekEngine.js";
@@ -28,7 +14,7 @@ const lunar = new LunarEngine();
 const index = new TimeIndex();
 
 // ربط المحرك الرئيسي
-const engine = new MasterEngine(db, week, solar, lunar, index, "hybrid");
+const engine = new MasterEngine(db, week, solar, lunar, index);
 
 console.log("Generating full year data (1-365)...");
 
@@ -45,5 +31,3 @@ try {
 } catch (error) {
     console.error("Error saving archive:", error);
 }
->>>>>>> 26849f9 (feat: initial clean commit of Astrolabe Engine)
-
